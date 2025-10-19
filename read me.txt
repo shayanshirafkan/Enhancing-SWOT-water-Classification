@@ -1,0 +1,47 @@
+README: Water/Land Classification Using XGBoost
+Steps to Run the Code
+
+1. Prepare Input Matrices (A and A5)
+Run the demo code to generate:
+
+Matrix A: Training data (features + labeled classes: water/land).
+
+Matrix A5: Input data for prediction (unlabeled features).
+
+2. Train and Predict with XGBoost
+Run XGB.ipynb in Python.
+
+Key variables:
+
+x (line 4): Time-series word features (e.g., 15 Khordad Dam data for the first 5 intervals).
+
+y: Class labels (water/land).
+
+Model Evaluation:
+
+Lines 1–8 evaluate model accuracy.
+
+Input for Prediction:
+
+In line 7, load A5 (prediction data) into the trained model.
+
+Output: Predicted classes are saved as PD.tex.
+
+3. Visualize and Analyze Results
+Run the read code to:
+
+Display predicted classes visually.
+
+Calculate the area of water/land regions in UTM coordinates.
+
+4. Repeat for All Input Data
+Execute steps 2–4 sequentially for each input dataset.
+
+5. Validation & Accuracy Metrics
+Ground Truth: in-situ matrix contains validation labels.
+
+Accuracy Functions:
+
+norms: Normalized error metrics.
+
+kgef: Kernel-based goodness-of-fit.
